@@ -11,12 +11,12 @@ import { Send, RefreshCw } from "lucide-react";
 // } from "@/lib/hooks/useAssisterr";
 // import { API_BASE_URL, API_KEY, HANDLE_NAME } from "../../lib/constants";
 import { Button } from "../ui/button";
-import { createSession, deleteSession, sendChatMessage } from "../../lib/assisterr";
+import { createSession, sendChatMessage } from "../../lib/assisterr";
 
 const Chat = () => {
   const [input, setInput] = useState("");
   const [sessionId, setSessionId] = useState<string | null>(null);
-  const [messages, setMessages] = useState<any[]>([]);
+  const [messages] = useState<any[]>([]);
   // const [sessions, setSessions] = useState<string[]>();
   const [streamingMessage, setStreamingMessage] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
